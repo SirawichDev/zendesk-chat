@@ -1,7 +1,8 @@
+/* eslint-disable prefer-rest-params */
 "use client";
 import { ZendeskProvider } from "react-use-zendesk";
 import { ExampleList } from "./components/ExampleList";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ValuesContainer } from "@/app/components/ValuesContainer"
 import { CallbackContainer } from "./components/CallbackContainer";
 import { KeyForm } from "@/app/components/Keyform";
@@ -64,20 +65,7 @@ export default function Page(): JSX.Element {
   function onChangeKey(key: string) {
     setApiKey(key);
   }
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      if (typeof window.zE === 'function') {
-        window.zE('messenger:set', 'launcher', {
-          label: {
-            th: 'สวัสดี! มีอะไรให้ช่วยไหมคะ?',
-            en: 'Hello! Need assistance?'
-          }
-        });
-      }
-    }, 100); // Show after 7 seconds
-  
-    return () => clearTimeout(timeout);
-  });
+
   return (
     <div id="root">
     <ZendeskProvider
