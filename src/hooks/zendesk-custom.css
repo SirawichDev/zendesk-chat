@@ -1,0 +1,24 @@
+#launcher {
+	position: fixed !important;
+	right: 60px !important;
+	transition: all !important;
+}
+
+iframe[name="Messaging window"] {
+	position: fixed !important;
+	right: 60px !important;
+	transition: all !important;
+}
+
+iframe[title="Close message"] {
+	position: relative !important;
+	right: 100px !important;
+	transition: all !important;
+}
+
+iframe[title="Message from company"] {
+	position: relative !important;
+	right: 100px !important;
+	transition: all !important;
+	animation-delay: 10s !important;
+}
