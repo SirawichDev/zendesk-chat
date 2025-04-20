@@ -8,7 +8,7 @@ import { CallbackContainer } from "./components/CallbackContainer";
 import { KeyForm } from "@/app/components/Keyform";
 import { toast } from "sonner";
 
-export default function Page(): JSX.Element {
+export default function Page() {
   const [apiKey, setApiKey] = useState("");
   const [callbacks, setCallBacks] = useState<
     { params: unknown; id: string; key: string }[]
